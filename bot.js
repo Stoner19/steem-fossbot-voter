@@ -25,5 +25,5 @@ setTimeout(function(){
       process.exit();
     }, {local: true});
   }
-  }, 6000); 
+  }, 60000); 
 });
