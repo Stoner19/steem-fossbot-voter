@@ -7,6 +7,7 @@ const
 // start bot iteration, this node script should be run as a job
 console.log("calling initSteem...");
 lib.initSteem(function() {
+setTimeout(function(){
   if (lib.hasFatalError()) {
     console.log("initSteem failed!");
     lib.sendEmail("Voter bot", "initSteem failed, please see logs");
@@ -24,4 +25,5 @@ lib.initSteem(function() {
       process.exit();
     }, {local: true});
   }
+  }, 6000); 
 });
